@@ -16,6 +16,8 @@ import java.util.concurrent.*;
  * @author yanhom
  * @since 1.0.3
  **/
+// 拉取配置中心的配置后注册
+// InitializingBean: 获取配置后初始化bean DisposableBean: 当bean销毁时调用destroy()
 @Slf4j
 public abstract class DtpLifecycleSupport extends ThreadPoolExecutor implements InitializingBean, DisposableBean {
 

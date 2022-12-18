@@ -38,10 +38,12 @@ public class AlibabaDubboDtpAdapter extends AbstractDtpAdapter {
         DataStore dataStore = ExtensionLoader.getExtensionLoader(DataStore.class).getDefaultExtension();
         Map<String, Object> executors = dataStore.get(EXECUTOR_SERVICE_COMPONENT_KEY);
         if (MapUtil.isNotEmpty(executors)) {
+            // 将dubboo的线程池自定义后，封装到本项目中
             executors.forEach((k, v) -> {
                 val name = genTpName(k);
                 val executorWrapper = new ExecutorWrapper(name, (ThreadPoolExecutor) v);
                 initNotifyItems(name, executorWrapper);
+                // 同时再加到dubbo中
                 executors.put(name, executorWrapper);
             });
         }

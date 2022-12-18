@@ -97,6 +97,7 @@ public abstract class AbstractDtpAdapter implements DtpAdapter, ApplicationListe
             return;
         }
 
+        // 获取SimpleTpProperties: 核心配置
         val tmpMap = StreamUtil.toMap(properties, SimpleTpProperties::getThreadPoolName);
         executorWrappers.forEach((k, v) -> refresh(name, v, platforms, tmpMap.get(k)));
     }

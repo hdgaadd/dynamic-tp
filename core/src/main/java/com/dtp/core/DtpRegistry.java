@@ -254,6 +254,7 @@ public class DtpRegistry implements ApplicationRunner, Ordered {
 
     @Override
     public void run(ApplicationArguments args) {
+        // 打印远程、远程与本地的交集 的线程名
         Set<String> remoteExecutors = Collections.emptySet();
         if (CollUtil.isNotEmpty(dtpProperties.getExecutors())) {
             remoteExecutors = dtpProperties.getExecutors().stream()

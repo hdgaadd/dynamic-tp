@@ -25,6 +25,7 @@ public class TestController {
 
     @GetMapping("/dtp-nacos-cloud-example/test")
     public String test() throws InterruptedException {
+        System.out.println("getCorePoolSize" + dtpExecutor1.getCorePoolSize());
         task();
         return "success";
     }

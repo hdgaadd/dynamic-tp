@@ -36,10 +36,11 @@ public class ThreadPoolConfiguration {
      *
      * @return 线程池实例
      */
-    @Bean
-    public DtpExecutor dtpExecutor1() {
-        return ThreadPoolCreator.createDynamicFast("dtpExecutor1");
-    }
+    // 不声明也可以
+//    @Bean
+//    public DtpExecutor dtpExecutor1() {
+//        return ThreadPoolCreator.createDynamicFast("dtpExecutor1");
+//    }
 
     /**
      * 通过{@link ThreadPoolBuilder} 设置详细参数创建动态线程池（推荐方式），

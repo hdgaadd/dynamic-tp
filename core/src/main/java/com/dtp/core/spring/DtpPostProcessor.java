@@ -30,6 +30,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
  * @author yanhom
  * @since 1.0.0
  **/
+// 拉取代码中的@Bean的配置后注册
 @Slf4j
 public class DtpPostProcessor implements BeanPostProcessor {
 
