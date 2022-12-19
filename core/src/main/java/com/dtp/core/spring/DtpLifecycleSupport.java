@@ -17,7 +17,8 @@ import java.util.concurrent.*;
  * @since 1.0.3
  **/
 // 拉取配置中心的配置后注册
-// InitializingBean: 获取配置后初始化bean DisposableBean: 当bean销毁时调用destroy()
+// InitializingBean: 获取配置后初始化bean
+// DisposableBean: 当bean销毁时调用destroy()
 
 // reference: https://blog.csdn.net/zstu_cc/article/details/53981606
 // 工厂方法模式：保证了初始化的方式的多样性：使用abstract让子类可以有多种初始化实现；严格规定了子类前后的其他动作：abstract实现了底层规范

@@ -33,6 +33,8 @@ import static com.dtp.common.em.QueueTypeEnum.buildLbq;
  * @author yanhom
  * @since 1.0.4
  **/
+// 自定义注册bean
+// 自定义解析配置
 @Slf4j
 public class DtpBeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar, EnvironmentAware {
 
