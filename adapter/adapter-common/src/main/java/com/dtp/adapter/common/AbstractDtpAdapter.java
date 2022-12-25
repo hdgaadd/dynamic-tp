@@ -61,6 +61,7 @@ public abstract class AbstractDtpAdapter implements DtpAdapter, ApplicationListe
         }
     }
 
+    // protected代表是留给子类使用的
     protected void initialize() { }
 
     public void register(String poolName, ThreadPoolExecutor threadPoolExecutor) { }
